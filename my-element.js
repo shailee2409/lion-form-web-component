@@ -13,7 +13,6 @@
  */
 
 
-
 import { ScopedElementsMixin, LitElement, html } from '@lion/core';
 import { Styles } from './element-styles.js';
 import { LionInputDate } from '@lion/input-date';
