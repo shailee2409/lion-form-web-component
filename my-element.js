@@ -11,46 +11,9 @@
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */
-/**import {LitElement, css} from 'lit-element';
-import { LionInput } from '@lion/input';
-import '@lion/form';
-import { LionInputDate } from '@lion/input-date';
-import { html } from '@lion/core';
-import '@lion/button';
-/**
- * An example element.
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
-/**export class MyElement extends LionElement {
-    static get properties() {
-       return {
-         name: {type: String}
-       } }
-
-          constructor() {
-            super();
-            this.name = 'World!!!';
-          }
-    render() {
-        return html`
-          /**<h1>Hello, ${this.name}!</h1>
-          <h2>Shailee</h2>*/
-          /**<lion-button>Default</lion-button>
-           /**<lion-input-date label="Date">shlicjdj</lion-input-date>
-           <lion-input name="firstName" label="First Name" ></lion-input>
-           <lion-input name="lastName" label="Last Name" ></lion-input>
-           <lion-input label="First Name"></lion-input>
-           <lion-input-datepicker label="Date" name="date"></lion-input-datepicker>*/
-
-      /**  `;
-      }
-  }
 
 
 
-customElements.define('my-element', MyElement);*/
 import { ScopedElementsMixin, LitElement, html } from '@lion/core';
 import { Styles } from './element-styles.js';
 import { LionInputDate } from '@lion/input-date';
@@ -95,12 +58,9 @@ export class MyElement extends ScopedElementsMixin(LitElement) {
          this.iban ="";
          this.email ="";
          this.comments ="";
-         this.radio="";
+         
        }
-  validate = e => {
-      const radioGroup = e.target.parentElement.querySelector('#dinos1');
-      radioGroup.submitted = !radioGroup.submitted;
-    };
+ 
   render() {
     return html`
     <div class="main">
@@ -155,9 +115,7 @@ export class MyElement extends ScopedElementsMixin(LitElement) {
     `;
 
   }
-getradio(e){
-this.radio  = e.target.choiceValue;
-}
+
   getFirstName(e) {
       this.firstname = e.target.value;
       }
@@ -194,16 +152,7 @@ console.log("comment",this.comment)
 
 
 }
-onreset(){
-this.firstname = "";
-         this.lastname ="";
-         this.date = "12/12/2020";
-         this.biography= "";
-         this.money =" 0.00";
-         this.iban ="";
-         this.email ="";
-         this.comments ="";
-}
+
 }
 
 customElements.define('my-element', MyElement);
